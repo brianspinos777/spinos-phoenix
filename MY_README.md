@@ -65,6 +65,9 @@ heroku create spinos-phoenix --buildpack "https://github.com/HashNuke/heroku-bui
 # set git remote heroku to https://git.heroku.com/spinos-phoenix.git
 heroku git:remote -a spinos-phoenix
 
+# for static assets
+heroku buildpacks:add https://github.com/gjaldon/heroku-buildpack-phoenix-static.git
+
 git push heroku master
 
 
@@ -83,14 +86,29 @@ $ git remote show origin
 $ git remote -v
 
 
+https://hexdocs.pm/phoenix/heroku.html <=====================
+
+heroku run "POOL_SIZE=2 mix ecto.migrate" # migrate the database???
+
 ```
 
 
-
 heroku addons:create heroku-postgresql:hobby-dev
+
 heroku config:set POOL_SIZE=18
 mix phoenix.gen.secret # generate secret
 heroku config:set SECRET_KEY_BASE="fsfsdhfskdfhsdfsdfsdhfsjdfhsdf"
 
 
 
+
+
+
+
+#=============== adding to my github account
+# adding code to my github account
+$ git remote add origin git@github.com:brianspinos777/spinos-phoenix.git
+$ git push --force
+$ git push -u origin master # set upstream
+$ git remote show origin
+$ git remote -v
