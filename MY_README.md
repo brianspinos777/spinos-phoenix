@@ -1,3 +1,6 @@
+https://hexdocs.pm/phoenix/heroku.html
+
+
 ```bash
 
 $ brew install elixir
@@ -86,18 +89,18 @@ $ git remote show origin
 $ git remote -v
 
 
-https://hexdocs.pm/phoenix/heroku.html <=====================
+ <=====================
 
 heroku run "POOL_SIZE=2 mix ecto.migrate" # migrate the database???
 
-```
+#===================================
 
 
 heroku addons:create heroku-postgresql:hobby-dev
 
 heroku config:set POOL_SIZE=18
 mix phoenix.gen.secret # generate secret
-heroku config:set SECRET_KEY_BASE="fsfsdhfskdfhsdfsdfsdhfsjdfhsdf"
+heroku config:set SECRET_KEY_BASE="shdfksdjfSOmefak3s3kr1t"
 
 
 
@@ -112,3 +115,6 @@ $ git push --force
 $ git push -u origin master # set upstream
 $ git remote show origin
 $ git remote -v
+
+
+```
